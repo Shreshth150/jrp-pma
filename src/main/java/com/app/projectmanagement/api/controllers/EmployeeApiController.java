@@ -24,7 +24,7 @@ public class EmployeeApiController {
     }
 
 
-    @GetMapping("{/id}")
+    @GetMapping("/get/{id}")
     public Employee getEmployeeById(@PathVariable("id") Long id){
         return employeeService.getEmployeeById(id);
     }
