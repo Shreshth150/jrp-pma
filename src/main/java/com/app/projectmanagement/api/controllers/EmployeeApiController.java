@@ -18,6 +18,12 @@ public class EmployeeApiController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping
+    public Iterable<Employee> getEmployees(){
+        return employeeService.getAll();
+    }
+
+
     @GetMapping("{/id}")
     public Employee getEmployeeById(@PathVariable("id") Long id){
         return employeeService.getEmployeeById(id);
