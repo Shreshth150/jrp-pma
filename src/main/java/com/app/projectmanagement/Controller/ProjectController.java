@@ -65,8 +65,8 @@ public class ProjectController {
 
 		Date startDate = theProj.getStartDate();
 		theProj.setStartDate(startDate);
-// 		Date endDate = theProj.getEndDate();
-		theProj.setEndDate(null);
+		Date endDate = theProj.getEndDate();
+		theProj.setEndDate(endDate);
 		model.addAttribute("allEmployees",employees);
 		model.addAttribute("project" , theProj);
 
